@@ -589,13 +589,22 @@ span
 .testimonials-main
   display: flex
   justify-content: flex-start
-  column-gap: 104px
+  // column-gap: 104px
+
+  overflow-x: auto
+
+.card::-webkit-scrollbar
+  display: none
+
 
 .testimonials-card
   display: flex
   flex-direction: row
   align-items: center
-  width: 740px
+  min-width: 740px
+
+.testimonials-card:not(:last-child)
+  margin-right: 104px
 
 .testimonials-card-main
   display: flex
@@ -655,6 +664,12 @@ span
   height: 318px
   order: -999
 
+.testimonials-card:nth-child(2) .testimonials-card-img
+  background-image: url(testimonials/woman.png)
+  background-size: contain
+  width: 340px
+  height: 318px
+  order: -999
 
 /*  Blog  */
 
@@ -716,11 +731,18 @@ span
 .blog-main-right
   display: flex
   flex-direction: column
+  height: 736px
+
+  overflow-y: auto
 
 .blog-main-right-card
   display: flex
   flex-direction: row
   align-items: center
+  min-height: 224px
+
+.blog-main-right::-webkit-scrollbar
+  display: none
 
 .blog-main-right-card:not(:last-child)
   margin-bottom: 32px
@@ -760,6 +782,17 @@ span
   background-image: url(blog/r2.png)
 
 .blog-main-right-card:nth-child(3) .blog-main-right-card-img
+  background-image: url(blog/r3.png)
+
+/*  ---  */
+
+.blog-main-right-card:nth-child(4) .blog-main-right-card-img
+  background-image: url(blog/r3.png)
+
+.blog-main-right-card:nth-child(5) .blog-main-right-card-img
+  background-image: url(blog/r3.png)
+
+.blog-main-right-card:nth-child(6) .blog-main-right-card-img
   background-image: url(blog/r3.png)
 
 
